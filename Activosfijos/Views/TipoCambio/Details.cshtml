@@ -1,0 +1,36 @@
+﻿@model Activosfijos.Models.tipocambio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tipocambio</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idtipobien)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idtipobien)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.gestion.idgestion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.gestion.idgestion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.moneda.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.moneda.nombre)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

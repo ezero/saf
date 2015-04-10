@@ -1,0 +1,57 @@
+﻿@model Activosfijos.Models.empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>empleado</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idempleado)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idempleado)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.cargo.descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.cargo.descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.departamento.descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.departamento.descripcion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ci)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ci)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.direccion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.direccion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

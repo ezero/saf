@@ -1,0 +1,36 @@
+﻿@model Activosfijos.Models.ingresoegreso
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>ingresoegreso</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idingresoegreso)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idingresoegreso)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tipoingreso)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tipoingreso)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tipoegreso)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tipoegreso)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

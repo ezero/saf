@@ -1,0 +1,59 @@
+﻿@model Activosfijos.Models.detalleapreciacion
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>detalleapreciacion</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.iddetalleapreciacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.iddetalleapreciacion)
+            @Html.ValidationMessageFor(model => model.iddetalleapreciacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idapreciacion, "apreciacion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("idapreciacion", String.Empty)
+            @Html.ValidationMessageFor(model => model.idapreciacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idgestion, "gestion")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("idgestion", String.Empty)
+            @Html.ValidationMessageFor(model => model.idgestion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idtipobien, "tipobien")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("idtipobien", String.Empty)
+            @Html.ValidationMessageFor(model => model.idtipobien)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

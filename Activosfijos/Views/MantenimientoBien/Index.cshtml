@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Activosfijos.Models.mantenimientobien>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idmantenimientobien)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bien.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mantenimiento.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idmantenimientobien)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bien.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mantenimiento.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

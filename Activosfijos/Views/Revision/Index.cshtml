@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Activosfijos.Models.revision>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idrevision)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bien.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gestion.idgestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.empleado.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idrevision)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bien.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gestion.idgestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.empleado.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

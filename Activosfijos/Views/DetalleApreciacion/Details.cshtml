@@ -1,0 +1,43 @@
+﻿@model Activosfijos.Models.detalleapreciacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>detalleapreciacion</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.iddetalleapreciacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.iddetalleapreciacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.apreciacion.idapreciacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.apreciacion.idapreciacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.gestion.idgestion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.gestion.idgestion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tipobien.descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tipobien.descripcion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

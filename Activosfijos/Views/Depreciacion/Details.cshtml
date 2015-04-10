@@ -1,0 +1,29 @@
+﻿@model Activosfijos.Models.depreciacion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>depreciacion</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.iddepreciacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.iddepreciacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.porcentajedepreciacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.porcentajedepreciacion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

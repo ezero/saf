@@ -1,0 +1,50 @@
+﻿@model Activosfijos.Models.revision
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>revision</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idrevision)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idrevision)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.bien.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bien.nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.gestion.idgestion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.gestion.idgestion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empleado.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empleado.nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tipo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tipo)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

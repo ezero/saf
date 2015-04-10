@@ -1,0 +1,43 @@
+﻿@model Activosfijos.Models.gestion
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>gestion</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.idgestion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.idgestion)
+            @Html.ValidationMessageFor(model => model.idgestion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.fecha)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fecha)
+            @Html.ValidationMessageFor(model => model.fecha)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

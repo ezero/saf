@@ -1,0 +1,53 @@
+﻿@model Activosfijos.Models.revision
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>revision</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idrevision)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idrevision)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.bien.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.bien.nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.gestion.idgestion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.gestion.idgestion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.empleado.nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.empleado.nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tipo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tipo)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

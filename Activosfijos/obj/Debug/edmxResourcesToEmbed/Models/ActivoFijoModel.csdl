@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="activofijoModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="activofijoEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="apreciacion" EntityType="activofijoModel.apreciacion" />
+    <EntitySet Name="bien" EntityType="activofijoModel.bien" />
+    <EntitySet Name="cargo" EntityType="activofijoModel.cargo" />
+    <EntitySet Name="categoria" EntityType="activofijoModel.categoria" />
+    <EntitySet Name="departamento" EntityType="activofijoModel.departamento" />
+    <EntitySet Name="depreciacion" EntityType="activofijoModel.depreciacion" />
+    <EntitySet Name="detalleapreciacion" EntityType="activofijoModel.detalleapreciacion" />
+    <EntitySet Name="detalledepreciacion" EntityType="activofijoModel.detalledepreciacion" />
+    <EntitySet Name="empleado" EntityType="activofijoModel.empleado" />
+    <EntitySet Name="gestion" EntityType="activofijoModel.gestion" />
+    <EntitySet Name="ingresoegreso" EntityType="activofijoModel.ingresoegreso" />
+    <EntitySet Name="mantenimiento" EntityType="activofijoModel.mantenimiento" />
+    <EntitySet Name="mantenimientobien" EntityType="activofijoModel.mantenimientobien" />
+    <EntitySet Name="moneda" EntityType="activofijoModel.moneda" />
+    <EntitySet Name="responsable" EntityType="activofijoModel.responsable" />
+    <EntitySet Name="revision" EntityType="activofijoModel.revision" />
+    <EntitySet Name="tipobien" EntityType="activofijoModel.tipobien" />
+    <EntitySet Name="tipocambio" EntityType="activofijoModel.tipocambio" />
+    <AssociationSet Name="FK__detalleap__idapr__4CA06362" Association="activofijoModel.FK__detalleap__idapr__4CA06362">
+      <End Role="apreciacion" EntitySet="apreciacion" />
+      <End Role="detalleapreciacion" EntitySet="detalleapreciacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bien__idegreso__2C3393D0" Association="activofijoModel.FK__bien__idegreso__2C3393D0">
+      <End Role="ingresoegreso" EntitySet="ingresoegreso" />
+      <End Role="bien" EntitySet="bien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bien__idingreso__2A4B4B5E" Association="activofijoModel.FK__bien__idingreso__2A4B4B5E">
+      <End Role="ingresoegreso" EntitySet="ingresoegreso" />
+      <End Role="bien" EntitySet="bien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__bien__idtipobien__2B3F6F97" Association="activofijoModel.FK__bien__idtipobien__2B3F6F97">
+      <End Role="tipobien" EntitySet="tipobien" />
+      <End Role="bien" EntitySet="bien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__mantenimi__idbie__30F848ED" Association="activofijoModel.FK__mantenimi__idbie__30F848ED">
+      <End Role="bien" EntitySet="bien" />
+      <End Role="mantenimientobien" EntitySet="mantenimientobien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__responsab__idbie__46E78A0C" Association="activofijoModel.FK__responsab__idbie__46E78A0C">
+      <End Role="bien" EntitySet="bien" />
+      <End Role="responsable" EntitySet="responsable" />
+    </AssociationSet>
+    <AssociationSet Name="FK__revision__idbien__403A8C7D" Association="activofijoModel.FK__revision__idbien__403A8C7D">
+      <End Role="bien" EntitySet="bien" />
+      <End Role="revision" EntitySet="revision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empleado__idcarg__1FCDBCEB" Association="activofijoModel.FK__empleado__idcarg__1FCDBCEB">
+      <End Role="cargo" EntitySet="cargo" />
+      <End Role="empleado" EntitySet="empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tipobien__idcate__25869641" Association="activofijoModel.FK__tipobien__idcate__25869641">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="tipobien" EntitySet="tipobien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__empleado__iddepa__20C1E124" Association="activofijoModel.FK__empleado__iddepa__20C1E124">
+      <End Role="departamento" EntitySet="departamento" />
+      <End Role="empleado" EntitySet="empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detallede__iddep__534D60F1" Association="activofijoModel.FK__detallede__iddep__534D60F1">
+      <End Role="depreciacion" EntitySet="depreciacion" />
+      <End Role="detalledepreciacion" EntitySet="detalledepreciacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalleap__idges__4D94879B" Association="activofijoModel.FK__detalleap__idges__4D94879B">
+      <End Role="gestion" EntitySet="gestion" />
+      <End Role="detalleapreciacion" EntitySet="detalleapreciacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detalleap__idtip__4E88ABD4" Association="activofijoModel.FK__detalleap__idtip__4E88ABD4">
+      <End Role="tipobien" EntitySet="tipobien" />
+      <End Role="detalleapreciacion" EntitySet="detalleapreciacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detallede__idges__5441852A" Association="activofijoModel.FK__detallede__idges__5441852A">
+      <End Role="gestion" EntitySet="gestion" />
+      <End Role="detalledepreciacion" EntitySet="detalledepreciacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__detallede__idtip__5535A963" Association="activofijoModel.FK__detallede__idtip__5535A963">
+      <End Role="tipobien" EntitySet="tipobien" />
+      <End Role="detalledepreciacion" EntitySet="detalledepreciacion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__responsab__idemp__47DBAE45" Association="activofijoModel.FK__responsab__idemp__47DBAE45">
+      <End Role="empleado" EntitySet="empleado" />
+      <End Role="responsable" EntitySet="responsable" />
+    </AssociationSet>
+    <AssociationSet Name="FK__revision__idempl__4222D4EF" Association="activofijoModel.FK__revision__idempl__4222D4EF">
+      <End Role="empleado" EntitySet="empleado" />
+      <End Role="revision" EntitySet="revision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__revision__idgest__412EB0B6" Association="activofijoModel.FK__revision__idgest__412EB0B6">
+      <End Role="gestion" EntitySet="gestion" />
+      <End Role="revision" EntitySet="revision" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tipocambi__idges__3A81B327" Association="activofijoModel.FK__tipocambi__idges__3A81B327">
+      <End Role="gestion" EntitySet="gestion" />
+      <End Role="tipocambio" EntitySet="tipocambio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__mantenimi__idman__31EC6D26" Association="activofijoModel.FK__mantenimi__idman__31EC6D26">
+      <End Role="mantenimiento" EntitySet="mantenimiento" />
+      <End Role="mantenimientobien" EntitySet="mantenimientobien" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tipocambi__idmon__3B75D760" Association="activofijoModel.FK__tipocambi__idmon__3B75D760">
+      <End Role="moneda" EntitySet="moneda" />
+      <End Role="tipocambio" EntitySet="tipocambio" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="apreciacion">
+    <Key>
+      <PropertyRef Name="idapreciacion" />
+    </Key>
+    <Property Name="idapreciacion" Type="Int32" Nullable="false" />
+    <Property Name="porcentajeapreciacion" Type="Double" Nullable="false" />
+    <NavigationProperty Name="detalleapreciacion" Relationship="activofijoModel.FK__detalleap__idapr__4CA06362" FromRole="apreciacion" ToRole="detalleapreciacion" />
+  </EntityType>
+  <EntityType Name="bien">
+    <Key>
+      <PropertyRef Name="idbien" />
+    </Key>
+    <Property Name="idbien" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="preciocompra" Type="Double" Nullable="false" />
+    <Property Name="precioactual" Type="Double" Nullable="false" />
+    <Property Name="idingreso" Type="Int32" />
+    <Property Name="idtipobien" Type="Int32" Nullable="false" />
+    <Property Name="fechaingreso" Type="DateTime" Precision="0" />
+    <Property Name="fechaegreso" Type="DateTime" Precision="0" />
+    <Property Name="idegreso" Type="Int32" />
+    <NavigationProperty Name="ingresoegreso" Relationship="activofijoModel.FK__bien__idegreso__2C3393D0" FromRole="bien" ToRole="ingresoegreso" />
+    <NavigationProperty Name="ingresoegreso1" Relationship="activofijoModel.FK__bien__idingreso__2A4B4B5E" FromRole="bien" ToRole="ingresoegreso" />
+    <NavigationProperty Name="tipobien" Relationship="activofijoModel.FK__bien__idtipobien__2B3F6F97" FromRole="bien" ToRole="tipobien" />
+    <NavigationProperty Name="mantenimientobien" Relationship="activofijoModel.FK__mantenimi__idbie__30F848ED" FromRole="bien" ToRole="mantenimientobien" />
+    <NavigationProperty Name="responsable" Relationship="activofijoModel.FK__responsab__idbie__46E78A0C" FromRole="bien" ToRole="responsable" />
+    <NavigationProperty Name="revision" Relationship="activofijoModel.FK__revision__idbien__403A8C7D" FromRole="bien" ToRole="revision" />
+  </EntityType>
+  <EntityType Name="cargo">
+    <Key>
+      <PropertyRef Name="idcargo" />
+    </Key>
+    <Property Name="idcargo" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="empleado" Relationship="activofijoModel.FK__empleado__idcarg__1FCDBCEB" FromRole="cargo" ToRole="empleado" />
+  </EntityType>
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idcategoria" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tipobien" Relationship="activofijoModel.FK__tipobien__idcate__25869641" FromRole="categoria" ToRole="tipobien" />
+  </EntityType>
+  <EntityType Name="departamento">
+    <Key>
+      <PropertyRef Name="iddepartamento" />
+    </Key>
+    <Property Name="iddepartamento" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="empleado" Relationship="activofijoModel.FK__empleado__iddepa__20C1E124" FromRole="departamento" ToRole="empleado" />
+  </EntityType>
+  <EntityType Name="depreciacion">
+    <Key>
+      <PropertyRef Name="iddepreciacion" />
+    </Key>
+    <Property Name="iddepreciacion" Type="Int32" Nullable="false" />
+    <Property Name="porcentajedepreciacion" Type="Double" Nullable="false" />
+    <NavigationProperty Name="detalledepreciacion" Relationship="activofijoModel.FK__detallede__iddep__534D60F1" FromRole="depreciacion" ToRole="detalledepreciacion" />
+  </EntityType>
+  <EntityType Name="detalleapreciacion">
+    <Key>
+      <PropertyRef Name="iddetalleapreciacion" />
+    </Key>
+    <Property Name="iddetalleapreciacion" Type="Int32" Nullable="false" />
+    <Property Name="idapreciacion" Type="Int32" Nullable="false" />
+    <Property Name="idgestion" Type="Int32" Nullable="false" />
+    <Property Name="idtipobien" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="apreciacion" Relationship="activofijoModel.FK__detalleap__idapr__4CA06362" FromRole="detalleapreciacion" ToRole="apreciacion" />
+    <NavigationProperty Name="gestion" Relationship="activofijoModel.FK__detalleap__idges__4D94879B" FromRole="detalleapreciacion" ToRole="gestion" />
+    <NavigationProperty Name="tipobien" Relationship="activofijoModel.FK__detalleap__idtip__4E88ABD4" FromRole="detalleapreciacion" ToRole="tipobien" />
+  </EntityType>
+  <EntityType Name="detalledepreciacion">
+    <Key>
+      <PropertyRef Name="iddetalledepreciacion" />
+    </Key>
+    <Property Name="iddetalledepreciacion" Type="Int32" Nullable="false" />
+    <Property Name="iddepreciacion" Type="Int32" Nullable="false" />
+    <Property Name="idgestion" Type="Int32" Nullable="false" />
+    <Property Name="idtipobien" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="depreciacion" Relationship="activofijoModel.FK__detallede__iddep__534D60F1" FromRole="detalledepreciacion" ToRole="depreciacion" />
+    <NavigationProperty Name="gestion" Relationship="activofijoModel.FK__detallede__idges__5441852A" FromRole="detalledepreciacion" ToRole="gestion" />
+    <NavigationProperty Name="tipobien" Relationship="activofijoModel.FK__detallede__idtip__5535A963" FromRole="detalledepreciacion" ToRole="tipobien" />
+  </EntityType>
+  <EntityType Name="empleado">
+    <Key>
+      <PropertyRef Name="idempleado" />
+    </Key>
+    <Property Name="idempleado" Type="Int32" Nullable="false" />
+    <Property Name="idcargo" Type="Int32" Nullable="false" />
+    <Property Name="iddepartamento" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="ci" Type="Int32" Nullable="false" />
+    <Property Name="direccion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="cargo" Relationship="activofijoModel.FK__empleado__idcarg__1FCDBCEB" FromRole="empleado" ToRole="cargo" />
+    <NavigationProperty Name="departamento" Relationship="activofijoModel.FK__empleado__iddepa__20C1E124" FromRole="empleado" ToRole="departamento" />
+    <NavigationProperty Name="responsable" Relationship="activofijoModel.FK__responsab__idemp__47DBAE45" FromRole="empleado" ToRole="responsable" />
+    <NavigationProperty Name="revision" Relationship="activofijoModel.FK__revision__idempl__4222D4EF" FromRole="empleado" ToRole="revision" />
+  </EntityType>
+  <EntityType Name="gestion">
+    <Key>
+      <PropertyRef Name="idgestion" />
+    </Key>
+    <Property Name="idgestion" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="detalleapreciacion" Relationship="activofijoModel.FK__detalleap__idges__4D94879B" FromRole="gestion" ToRole="detalleapreciacion" />
+    <NavigationProperty Name="detalledepreciacion" Relationship="activofijoModel.FK__detallede__idges__5441852A" FromRole="gestion" ToRole="detalledepreciacion" />
+    <NavigationProperty Name="revision" Relationship="activofijoModel.FK__revision__idgest__412EB0B6" FromRole="gestion" ToRole="revision" />
+    <NavigationProperty Name="tipocambio" Relationship="activofijoModel.FK__tipocambi__idges__3A81B327" FromRole="gestion" ToRole="tipocambio" />
+  </EntityType>
+  <EntityType Name="ingresoegreso">
+    <Key>
+      <PropertyRef Name="idingresoegreso" />
+    </Key>
+    <Property Name="idingresoegreso" Type="Int32" Nullable="false" />
+    <Property Name="tipoingreso" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="tipoegreso" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="bien" Relationship="activofijoModel.FK__bien__idegreso__2C3393D0" FromRole="ingresoegreso" ToRole="bien" />
+    <NavigationProperty Name="bien1" Relationship="activofijoModel.FK__bien__idingreso__2A4B4B5E" FromRole="ingresoegreso" ToRole="bien" />
+  </EntityType>
+  <EntityType Name="mantenimiento">
+    <Key>
+      <PropertyRef Name="idmantenimiento" />
+    </Key>
+    <Property Name="idmantenimiento" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="tipo" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="mantenimientobien" Relationship="activofijoModel.FK__mantenimi__idman__31EC6D26" FromRole="mantenimiento" ToRole="mantenimientobien" />
+  </EntityType>
+  <EntityType Name="mantenimientobien">
+    <Key>
+      <PropertyRef Name="idmantenimientobien" />
+    </Key>
+    <Property Name="idmantenimientobien" Type="Int32" Nullable="false" />
+    <Property Name="idbien" Type="Int32" Nullable="false" />
+    <Property Name="idmantenimiento" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="bien" Relationship="activofijoModel.FK__mantenimi__idbie__30F848ED" FromRole="mantenimientobien" ToRole="bien" />
+    <NavigationProperty Name="mantenimiento" Relationship="activofijoModel.FK__mantenimi__idman__31EC6D26" FromRole="mantenimientobien" ToRole="mantenimiento" />
+  </EntityType>
+  <EntityType Name="moneda">
+    <Key>
+      <PropertyRef Name="idmoneda" />
+    </Key>
+    <Property Name="idmoneda" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="tipocambio" Relationship="activofijoModel.FK__tipocambi__idmon__3B75D760" FromRole="moneda" ToRole="tipocambio" />
+  </EntityType>
+  <EntityType Name="responsable">
+    <Key>
+      <PropertyRef Name="idresponsable" />
+    </Key>
+    <Property Name="idresponsable" Type="Int32" Nullable="false" />
+    <Property Name="idbien" Type="Int32" Nullable="false" />
+    <Property Name="idempleado" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="bien" Relationship="activofijoModel.FK__responsab__idbie__46E78A0C" FromRole="responsable" ToRole="bien" />
+    <NavigationProperty Name="empleado" Relationship="activofijoModel.FK__responsab__idemp__47DBAE45" FromRole="responsable" ToRole="empleado" />
+  </EntityType>
+  <EntityType Name="revision">
+    <Key>
+      <PropertyRef Name="idrevision" />
+    </Key>
+    <Property Name="idrevision" Type="Int32" Nullable="false" />
+    <Property Name="idbien" Type="Int32" Nullable="false" />
+    <Property Name="idgestion" Type="Int32" Nullable="false" />
+    <Property Name="idempleado" Type="Int32" Nullable="false" />
+    <Property Name="tipo" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <NavigationProperty Name="bien" Relationship="activofijoModel.FK__revision__idbien__403A8C7D" FromRole="revision" ToRole="bien" />
+    <NavigationProperty Name="empleado" Relationship="activofijoModel.FK__revision__idempl__4222D4EF" FromRole="revision" ToRole="empleado" />
+    <NavigationProperty Name="gestion" Relationship="activofijoModel.FK__revision__idgest__412EB0B6" FromRole="revision" ToRole="gestion" />
+  </EntityType>
+  <EntityType Name="tipobien">
+    <Key>
+      <PropertyRef Name="idtipobien" />
+    </Key>
+    <Property Name="idtipobien" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" Nullable="false" MaxLength="80" Unicode="false" FixedLength="false" />
+    <Property Name="idcategoria" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="bien" Relationship="activofijoModel.FK__bien__idtipobien__2B3F6F97" FromRole="tipobien" ToRole="bien" />
+    <NavigationProperty Name="categoria" Relationship="activofijoModel.FK__tipobien__idcate__25869641" FromRole="tipobien" ToRole="categoria" />
+    <NavigationProperty Name="detalleapreciacion" Relationship="activofijoModel.FK__detalleap__idtip__4E88ABD4" FromRole="tipobien" ToRole="detalleapreciacion" />
+    <NavigationProperty Name="detalledepreciacion" Relationship="activofijoModel.FK__detallede__idtip__5535A963" FromRole="tipobien" ToRole="detalledepreciacion" />
+  </EntityType>
+  <EntityType Name="tipocambio">
+    <Key>
+      <PropertyRef Name="idtipobien" />
+    </Key>
+    <Property Name="idtipobien" Type="Int32" Nullable="false" />
+    <Property Name="idgestion" Type="Int32" Nullable="false" />
+    <Property Name="idmoneda" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="gestion" Relationship="activofijoModel.FK__tipocambi__idges__3A81B327" FromRole="tipocambio" ToRole="gestion" />
+    <NavigationProperty Name="moneda" Relationship="activofijoModel.FK__tipocambi__idmon__3B75D760" FromRole="tipocambio" ToRole="moneda" />
+  </EntityType>
+  <Association Name="FK__detalleap__idapr__4CA06362">
+    <End Role="apreciacion" Type="activofijoModel.apreciacion" Multiplicity="1" />
+    <End Role="detalleapreciacion" Type="activofijoModel.detalleapreciacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="apreciacion">
+        <PropertyRef Name="idapreciacion" />
+      </Principal>
+      <Dependent Role="detalleapreciacion">
+        <PropertyRef Name="idapreciacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bien__idegreso__2C3393D0">
+    <End Role="ingresoegreso" Type="activofijoModel.ingresoegreso" Multiplicity="0..1" />
+    <End Role="bien" Type="activofijoModel.bien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ingresoegreso">
+        <PropertyRef Name="idingresoegreso" />
+      </Principal>
+      <Dependent Role="bien">
+        <PropertyRef Name="idegreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bien__idingreso__2A4B4B5E">
+    <End Role="ingresoegreso" Type="activofijoModel.ingresoegreso" Multiplicity="0..1" />
+    <End Role="bien" Type="activofijoModel.bien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ingresoegreso">
+        <PropertyRef Name="idingresoegreso" />
+      </Principal>
+      <Dependent Role="bien">
+        <PropertyRef Name="idingreso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__bien__idtipobien__2B3F6F97">
+    <End Role="tipobien" Type="activofijoModel.tipobien" Multiplicity="1" />
+    <End Role="bien" Type="activofijoModel.bien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipobien">
+        <PropertyRef Name="idtipobien" />
+      </Principal>
+      <Dependent Role="bien">
+        <PropertyRef Name="idtipobien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__mantenimi__idbie__30F848ED">
+    <End Role="bien" Type="activofijoModel.bien" Multiplicity="1" />
+    <End Role="mantenimientobien" Type="activofijoModel.mantenimientobien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bien">
+        <PropertyRef Name="idbien" />
+      </Principal>
+      <Dependent Role="mantenimientobien">
+        <PropertyRef Name="idbien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__responsab__idbie__46E78A0C">
+    <End Role="bien" Type="activofijoModel.bien" Multiplicity="1" />
+    <End Role="responsable" Type="activofijoModel.responsable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bien">
+        <PropertyRef Name="idbien" />
+      </Principal>
+      <Dependent Role="responsable">
+        <PropertyRef Name="idbien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__revision__idbien__403A8C7D">
+    <End Role="bien" Type="activofijoModel.bien" Multiplicity="1" />
+    <End Role="revision" Type="activofijoModel.revision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="bien">
+        <PropertyRef Name="idbien" />
+      </Principal>
+      <Dependent Role="revision">
+        <PropertyRef Name="idbien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empleado__idcarg__1FCDBCEB">
+    <End Role="cargo" Type="activofijoModel.cargo" Multiplicity="1" />
+    <End Role="empleado" Type="activofijoModel.empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cargo">
+        <PropertyRef Name="idcargo" />
+      </Principal>
+      <Dependent Role="empleado">
+        <PropertyRef Name="idcargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tipobien__idcate__25869641">
+    <End Role="categoria" Type="activofijoModel.categoria" Multiplicity="1" />
+    <End Role="tipobien" Type="activofijoModel.tipobien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="idcategoria" />
+      </Principal>
+      <Dependent Role="tipobien">
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__empleado__iddepa__20C1E124">
+    <End Role="departamento" Type="activofijoModel.departamento" Multiplicity="1" />
+    <End Role="empleado" Type="activofijoModel.empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="departamento">
+        <PropertyRef Name="iddepartamento" />
+      </Principal>
+      <Dependent Role="empleado">
+        <PropertyRef Name="iddepartamento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detallede__iddep__534D60F1">
+    <End Role="depreciacion" Type="activofijoModel.depreciacion" Multiplicity="1" />
+    <End Role="detalledepreciacion" Type="activofijoModel.detalledepreciacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="depreciacion">
+        <PropertyRef Name="iddepreciacion" />
+      </Principal>
+      <Dependent Role="detalledepreciacion">
+        <PropertyRef Name="iddepreciacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalleap__idges__4D94879B">
+    <End Role="gestion" Type="activofijoModel.gestion" Multiplicity="1" />
+    <End Role="detalleapreciacion" Type="activofijoModel.detalleapreciacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gestion">
+        <PropertyRef Name="idgestion" />
+      </Principal>
+      <Dependent Role="detalleapreciacion">
+        <PropertyRef Name="idgestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detalleap__idtip__4E88ABD4">
+    <End Role="tipobien" Type="activofijoModel.tipobien" Multiplicity="1" />
+    <End Role="detalleapreciacion" Type="activofijoModel.detalleapreciacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipobien">
+        <PropertyRef Name="idtipobien" />
+      </Principal>
+      <Dependent Role="detalleapreciacion">
+        <PropertyRef Name="idtipobien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detallede__idges__5441852A">
+    <End Role="gestion" Type="activofijoModel.gestion" Multiplicity="1" />
+    <End Role="detalledepreciacion" Type="activofijoModel.detalledepreciacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gestion">
+        <PropertyRef Name="idgestion" />
+      </Principal>
+      <Dependent Role="detalledepreciacion">
+        <PropertyRef Name="idgestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__detallede__idtip__5535A963">
+    <End Role="tipobien" Type="activofijoModel.tipobien" Multiplicity="1" />
+    <End Role="detalledepreciacion" Type="activofijoModel.detalledepreciacion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipobien">
+        <PropertyRef Name="idtipobien" />
+      </Principal>
+      <Dependent Role="detalledepreciacion">
+        <PropertyRef Name="idtipobien" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__responsab__idemp__47DBAE45">
+    <End Role="empleado" Type="activofijoModel.empleado" Multiplicity="1" />
+    <End Role="responsable" Type="activofijoModel.responsable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empleado">
+        <PropertyRef Name="idempleado" />
+      </Principal>
+      <Dependent Role="responsable">
+        <PropertyRef Name="idempleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__revision__idempl__4222D4EF">
+    <End Role="empleado" Type="activofijoModel.empleado" Multiplicity="1" />
+    <End Role="revision" Type="activofijoModel.revision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empleado">
+        <PropertyRef Name="idempleado" />
+      </Principal>
+      <Dependent Role="revision">
+        <PropertyRef Name="idempleado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__revision__idgest__412EB0B6">
+    <End Role="gestion" Type="activofijoModel.gestion" Multiplicity="1" />
+    <End Role="revision" Type="activofijoModel.revision" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gestion">
+        <PropertyRef Name="idgestion" />
+      </Principal>
+      <Dependent Role="revision">
+        <PropertyRef Name="idgestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tipocambi__idges__3A81B327">
+    <End Role="gestion" Type="activofijoModel.gestion" Multiplicity="1" />
+    <End Role="tipocambio" Type="activofijoModel.tipocambio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="gestion">
+        <PropertyRef Name="idgestion" />
+      </Principal>
+      <Dependent Role="tipocambio">
+        <PropertyRef Name="idgestion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__mantenimi__idman__31EC6D26">
+    <End Role="mantenimiento" Type="activofijoModel.mantenimiento" Multiplicity="1" />
+    <End Role="mantenimientobien" Type="activofijoModel.mantenimientobien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mantenimiento">
+        <PropertyRef Name="idmantenimiento" />
+      </Principal>
+      <Dependent Role="mantenimientobien">
+        <PropertyRef Name="idmantenimiento" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tipocambi__idmon__3B75D760">
+    <End Role="moneda" Type="activofijoModel.moneda" Multiplicity="1" />
+    <End Role="tipocambio" Type="activofijoModel.tipocambio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="moneda">
+        <PropertyRef Name="idmoneda" />
+      </Principal>
+      <Dependent Role="tipocambio">
+        <PropertyRef Name="idmoneda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

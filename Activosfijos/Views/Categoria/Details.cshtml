@@ -1,0 +1,29 @@
+﻿@model Activosfijos.Models.categoria
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>categoria</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.idcategoria)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.idcategoria)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.descripcion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.descripcion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
