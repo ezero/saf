@@ -1,4 +1,4 @@
-Ôªøusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -53,7 +53,7 @@ namespace Activosfijos.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "El nombre de usuario o la contrase√±a especificados son incorrectos.");
+                    ModelState.AddModelError("", "El nombre de usuario o la contraseÒa especificados son incorrectos.");
                 }
             }
 
@@ -125,7 +125,7 @@ namespace Activosfijos.Controllers
             if (ModelState.IsValid)
             {
 
-                // ChangePassword iniciar√° una excepci√≥n en lugar de
+                // ChangePassword iniciar· una excepciÛn en lugar de
                 // devolver false en determinados escenarios de error.
                 bool changePasswordSucceeded;
                 try
@@ -144,7 +144,7 @@ namespace Activosfijos.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "La contrase√±a actual es incorrecta o la nueva contrase√±a no es v√°lida.");
+                    ModelState.AddModelError("", "La contraseÒa actual es incorrecta o la nueva contraseÒa no es v·lida.");
                 }
             }
 
@@ -160,44 +160,45 @@ namespace Activosfijos.Controllers
             return View();
         }
 
-        #region C√≥digos de estado
+        #region CÛdigos de estado
         private static string ErrorCodeToString(MembershipCreateStatus createStatus)
         {
             // Vaya a http://go.microsoft.com/fwlink/?LinkID=177550 para
-            // obtener una lista completa de c√≥digos de estado.
+            // obtener una lista completa de cÛdigos de estado.
             switch (createStatus)
             {
                 case MembershipCreateStatus.DuplicateUserName:
                     return "El nombre de usuario ya existe. Escriba un nombre de usuario diferente.";
 
                 case MembershipCreateStatus.DuplicateEmail:
-                    return "Ya existe un nombre de usuario para esa direcci√≥n de correo electr√≥nico. Escriba una direcci√≥n de correo electr√≥nico diferente.";
+                    return "Ya existe un nombre de usuario para esa direcciÛn de correo electrÛnico. Escriba una direcciÛn de correo electrÛnico diferente.";
 
                 case MembershipCreateStatus.InvalidPassword:
-                    return "La contrase√±a especificada no es v√°lida. Escriba un valor de contrase√±a v√°lido.";
+                    return "La contraseÒa especificada no es v·lida. Escriba un valor de contraseÒa v·lido.";
 
                 case MembershipCreateStatus.InvalidEmail:
-                    return "La direcci√≥n de correo electr√≥nico especificada no es v√°lida. Compruebe el valor e int√©ntelo de nuevo.";
+                    return "La direcciÛn de correo electrÛnico especificada no es v·lida. Compruebe el valor e intÈntelo de nuevo.";
 
                 case MembershipCreateStatus.InvalidAnswer:
-                    return "La respuesta de recuperaci√≥n de la contrase√±a especificada no es v√°lida. Compruebe el valor e int√©ntelo de nuevo.";
+                    return "La respuesta de recuperaciÛn de la contraseÒa especificada no es v·lida. Compruebe el valor e intÈntelo de nuevo.";
 
                 case MembershipCreateStatus.InvalidQuestion:
-                    return "La pregunta de recuperaci√≥n de la contrase√±a especificada no es v√°lida. Compruebe el valor e int√©ntelo de nuevo.";
+                    return "La pregunta de recuperaciÛn de la contraseÒa especificada no es v·lida. Compruebe el valor e intÈntelo de nuevo.";
 
                 case MembershipCreateStatus.InvalidUserName:
-                    return "El nombre de usuario especificado no es v√°lido. Compruebe el valor e int√©ntelo de nuevo.";
+                    return "El nombre de usuario especificado no es v·lido. Compruebe el valor e intÈntelo de nuevo.";
 
                 case MembershipCreateStatus.ProviderError:
-                    return "El proveedor de autenticaci√≥n devolvi√≥ un error. Compruebe los datos especificados e int√©ntelo de nuevo. Si el problema contin√∫a, p√≥ngase en contacto con el administrador del sistema.";
+                    return "El proveedor de autenticaciÛn devolviÛ un error. Compruebe los datos especificados e intÈntelo de nuevo. Si el problema contin˙a, pÛngase en contacto con el administrador del sistema.";
 
                 case MembershipCreateStatus.UserRejected:
-                    return "La solicitud de creaci√≥n de usuario se ha cancelado. Compruebe los datos especificados e int√©ntelo de nuevo. Si el problema contin√∫a, p√≥ngase en contacto con el administrador del sistema.";
+                    return "La solicitud de creaciÛn de usuario se ha cancelado. Compruebe los datos especificados e intÈntelo de nuevo. Si el problema contin˙a, pÛngase en contacto con el administrador del sistema.";
 
                 default:
-                    return "Error desconocido. Compruebe los datos especificados e int√©ntelo de nuevo. Si el problema contin√∫a, p√≥ngase en contacto con el administrador del sistema.";
+                    return "Error desconocido. Compruebe los datos especificados e intÈntelo de nuevo. Si el problema contin˙a, pÛngase en contacto con el administrador del sistema.";
             }
         }
+
         #endregion
     }
 }
