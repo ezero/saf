@@ -1,0 +1,58 @@
+﻿@model SAF.Models.Bien
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Bien</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BienNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BienNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BienPrecioCompra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BienPrecioCompra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BienPrecioActual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BienPrecioActual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BienFechaIngreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BienFechaIngreso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BienFechaEgreso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BienFechaEgreso)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BienId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

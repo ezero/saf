@@ -1,0 +1,73 @@
+﻿@model SAF.Models.Bien
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Bien</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BienNombre, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BienNombre)
+                @Html.ValidationMessageFor(model => model.BienNombre)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BienPrecioCompra, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BienPrecioCompra)
+                @Html.ValidationMessageFor(model => model.BienPrecioCompra)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BienPrecioActual, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BienPrecioActual)
+                @Html.ValidationMessageFor(model => model.BienPrecioActual)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BienFechaIngreso, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BienFechaIngreso)
+                @Html.ValidationMessageFor(model => model.BienFechaIngreso)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.BienFechaEgreso, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.BienFechaEgreso)
+                @Html.ValidationMessageFor(model => model.BienFechaEgreso)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

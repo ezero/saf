@@ -1,0 +1,26 @@
+﻿@model SAF.Models.Gestion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Gestion</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GestionFecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GestionFecha)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GestionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

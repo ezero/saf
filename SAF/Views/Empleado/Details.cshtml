@@ -1,0 +1,42 @@
+﻿@model SAF.Models.Empleado
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Empleado</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpleadoNombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpleadoNombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpleadoCi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpleadoCi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmpleadoDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpleadoDireccion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmpleadoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
